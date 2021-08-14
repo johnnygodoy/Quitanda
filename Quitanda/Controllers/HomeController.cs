@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quitanda.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,8 +29,8 @@ namespace Quitanda.Controllers
         }
 
         public ActionResult Fruta()
-        {
-            ViewBag.Message = "Que Fruta:";
+        {            
+             ViewData["nome"] = "Banana";
 
             return View();
         }
