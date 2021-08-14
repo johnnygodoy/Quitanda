@@ -1,0 +1,34 @@
+[
+  {
+    "FrutaID": 1,
+    "NomeFruta": "Banana"
+  },
+  {
+    "FrutaID": 2,
+    "NomeFruta": "Maça"
+  },
+  {
+    "FrutaID": 3,
+    "NomeFruta": "Pera"
+  },
+  {
+    "FrutaID": 4,
+    "NomeFruta": "Kiwi"
+  },
+  {
+    "FrutaID": 6,
+    "NomeFruta": "Merixica"
+  },
+  {
+    "FrutaID": 7,
+    "NomeFruta": "Maça Gala"
+  },
+  {
+    "FrutaID": 8,
+    "NomeFruta": "Banana da Terra"
+  },
+  {
+    "FrutaID": 9,
+    "NomeFruta": "Banana Nanica"
+  }
+]
