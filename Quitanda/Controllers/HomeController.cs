@@ -28,11 +28,24 @@ namespace Quitanda.Controllers
             return View();
         }
 
-        public ActionResult Fruta()
-        {            
-             ViewData["nome"] = "Banana";
+        public ActionResult Fruta(Fruta frutas)
+        {              
+                      
+
+            frutas.FrutaID = 1;
+            frutas.NomeFruta = "maça";
+            //ViewData["FrutaId"] = teste.FrutaID;
+            //ViewData["NomeFruta"] = teste.NomeFruta;
+            return View(frutas);
+        }
+        [HttpPost]
+        public ActionResult EnviarLista(Fruta fruta)
+        {
+            ViewData["FrutaID"] = fruta.FrutaID;
+            ViewData["NomeFruta"] = fruta.NomeFruta;
 
             return View();
         }
+
     }
 }

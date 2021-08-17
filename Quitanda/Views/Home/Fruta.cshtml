@@ -1,4 +1,5 @@
-﻿
+﻿@model Quitanda.Models.Fruta
+
 @{
     ViewBag.Title = "Frutas da Quitanda";
 }
@@ -7,5 +8,29 @@
 <h3>@ViewBag.Message</h3>
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-<p>@ViewData["nome"]</p>
 
+<form action="Home/EnviarLista" method="post">
+    <fieldset>
+        <legend>Frutas</legend>
+    </fieldset>
+   
+    <div>
+        <label for="FrutaId">Código</label>
+    </div>
+    <div>
+        <input type="number" value="@Model.FrutaID" name="FrutaId" />
+    </div>
+
+    <div>
+        <label for="NomeFruta">Nome</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.NomeFruta" name="NomeFruta" />
+    </div>
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+   @Html.ActionLink("Voltar", "Index", "Home")
+</form>
+@*<p>@Model.FrutaID</p>
+<p>@Model.NomeFruta</p>*@
