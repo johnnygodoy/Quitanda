@@ -1,16 +1,24 @@
 ﻿@model Quitanda.Models.Fruta
 
 @{
-    ViewBag.Title = "EnviarLista";
+    ViewBag.Title = "Enviar Fruta";
 }
 
 <h2>EnviarLista</h2>
 <div>
     <div>
-       @Model.FrutaID;
+        @Html.LabelFor(x => x.FrutaID)
     </div>
     <div>
-       @Model.NomeFruta;
+        @Model.FrutaID
+    </div>
+    <div>
+        @Html.LabelFor(x => x.NomeFruta)
+    </div>
+    <div>
+        @Model.NomeFruta
     </div>
 </div>
-
+<div>
+    @Html.ActionLink("Voltar", "Index", "Home")
+</div>

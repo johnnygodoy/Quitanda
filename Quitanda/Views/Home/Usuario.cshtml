@@ -1,0 +1,55 @@
+﻿@model Quitanda.Models.Usuario
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Usuário</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        <fieldset>
+            <legend>Dados do Usuário Padrão</legend>
+            <div class="editor-label">
+                @Html.LabelFor(x => x.UsuarioId)
+            </div>
+            <div class="editor-field">
+               @Html.EditorFor(x => x.UsuarioId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(x => x.Nome)
+            </div>
+
+            <div>
+                @Html.EditorFor(x =>x.Nome)
+                @Html.ValidationMessageFor(x => x.Nome)
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Email)
+            </div>
+            <div>
+               @Html.EditorFor(x => x.Email)
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.Password)
+            </div>
+            <div>
+               @Html.EditorFor(x => x.Password)
+            </div>
+
+            <div>
+                @Html.LabelFor(x => x.ConfirmarPassword)
+            </div>
+            <div>
+               @Html.EditorFor(x => x.ConfirmarPassword)
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        @Html.ActionLink("Voltar", "Index", "Home")
+    </div>
+}   

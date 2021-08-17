@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.Mvc;
 
 namespace Quitanda.Controllers
@@ -29,23 +30,37 @@ namespace Quitanda.Controllers
         }
 
         public ActionResult Fruta(Fruta frutas)
-        {              
-                      
+        {
+            var fruta1 = frutas.GetFruta(1);        
 
-            frutas.FrutaID = 1;
-            frutas.NomeFruta = "maça";
-            //ViewData["FrutaId"] = teste.FrutaID;
-            //ViewData["NomeFruta"] = teste.NomeFruta;
+            frutas.FrutaID = fruta1.FrutaID;
+            frutas.NomeFruta = fruta1.NomeFruta;
+        
             return View(frutas);
         }
         [HttpPost]
-        public ActionResult EnviarLista(Fruta fruta)
+        public ActionResult EnviarFruta(Fruta fruta)
         {
             ViewData["FrutaID"] = fruta.FrutaID;
             ViewData["NomeFruta"] = fruta.NomeFruta;
 
-            return View();
+            return View(fruta);
+        }
+      
+        public ActionResult Usuario()
+        {
+            Usuario usuario = new Usuario();
+            return View(usuario);
         }
 
+        [HttpPost]
+        public ActionResult Usuario(Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Usuario", usuario);
+            }
+            return View(usuario);
+        }
     }
 }

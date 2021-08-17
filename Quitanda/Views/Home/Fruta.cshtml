@@ -8,29 +8,32 @@
 <h3>@ViewBag.Message</h3>
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-
-<form action="Home/EnviarLista" method="post">
+@using (Html.BeginForm("EnviarLista", "Home", FormMethod.Post))
+{
     <fieldset>
         <legend>Frutas</legend>
-    </fieldset>
-   
-    <div>
-        <label for="FrutaId">Código</label>
-    </div>
-    <div>
-        <input type="number" value="@Model.FrutaID" name="FrutaId" />
-    </div>
 
-    <div>
-        <label for="NomeFruta">Nome</label>
-    </div>
-    <div>
-        <input type="text" value="@Model.NomeFruta" name="NomeFruta" />
-    </div>
-    <div>
-        <input type="submit" value="Enviar" />
-    </div>
-   @Html.ActionLink("Voltar", "Index", "Home")
-</form>
-@*<p>@Model.FrutaID</p>
-<p>@Model.NomeFruta</p>*@
+
+        <div>
+            <b>@Html.LabelFor(x => x.FrutaID)</b>
+        </div>
+        <div>
+            @Html.EditorFor(x => x.FrutaID)
+            @*<input type="number" value="@Model.FrutaID" name="FrutaId" />*@
+        </div>
+
+        <div>
+            <b>@Html.LabelFor(x => x.NomeFruta)</b>
+            
+        </div>
+        <div>
+            <b>@Html.EditorFor(x => x.NomeFruta)</b>
+            @*<input type="text" value="@Model.NomeFruta" name="NomeFruta" />*@
+        </div>
+       
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </fieldset>
+}
+

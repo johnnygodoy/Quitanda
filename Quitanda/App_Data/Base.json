@@ -30,5 +30,13 @@
   {
     "FrutaID": 9,
     "NomeFruta": "Banana Nanica"
+  },
+  {
+    "FrutaID": 10,
+    "NomeFruta": "bananamaça"
+  },
+  {
+    "FrutaID": 11,
+    "NomeFruta": "banana2"
   }
 ]

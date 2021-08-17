@@ -192,7 +192,7 @@
     <Compile Include="Controllers\FrutaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SenhaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,7 +200,7 @@
     <Compile Include="Models\Fruta.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Senha.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -223,7 +223,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Data\Base.json" />
-    <Content Include="App_Data\Senha.json" />
+    <Content Include="App_Data\Usuario.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -269,9 +269,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Senha\Senha.cshtml" />
     <Content Include="Views\Home\Fruta.cshtml" />
     <Content Include="Views\Home\EnviarLista.cshtml" />
+    <Content Include="Views\Home\Usuario.cshtml" />
+    <Content Include="Views\Home\Resultado.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

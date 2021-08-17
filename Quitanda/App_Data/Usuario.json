@@ -1,0 +1,18 @@
+[
+  {
+    "UsuarioId": 1,
+    "Login": "bananaLogin",
+    "Nome": "banana",
+    "Email": "banana@.com.br",
+    "Password": "banana123",
+    "ConfirmarPassword": "banana123"
+  },
+  {
+    "UsuarioId": 2,
+    "Login": "peraLogin",
+    "Nome": "pera",
+    "Email": "pera@.com.br",
+    "Password": "pera123",
+    "ConfirmarPassword": "pera123"
+  }
+]

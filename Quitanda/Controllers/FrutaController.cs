@@ -53,5 +53,6 @@ namespace Quitanda.Controllers
 
             _fruta.Deletar(id);
         }
+
     }
 }

@@ -9,8 +9,8 @@ using System.Web.Hosting;
 
 namespace Quitanda.Models
 {
-   
-     public class Fruta
+
+    public class Fruta
     {
         public int FrutaID { get; set; }
         public string NomeFruta { get; set; }
@@ -64,6 +64,13 @@ namespace Quitanda.Models
             reescreverArquivo(listafrutas);
             return Fruta;
 
+        }
+
+        public Fruta GetFruta(int id)
+        {
+            Fruta frutas = new Fruta();
+            var idFruta = frutas.ListarFruta().Where(x => x.FrutaID == id).FirstOrDefault();
+            return (idFruta);
         }
 
         public bool Deletar(int id)
